@@ -8,15 +8,13 @@ public class LivroView
 {
 
 
-   public void menu()
+   public LivroModel menuCriarLivro(LivroModel livro)
    {
-
-       int comando = Integer.parseInt(JOptionPane.showInputDialog(null,"1 - Para cadastrar Livro\n" + "2 - Para Cadastrar usuario\n" +
-                "3 - Para fazer um emprestimo\n" + "4- Para Registrar Devolução\n" + "5 - Para Mostrar livros disponiveis\n"));
-
-
-
-
+       livro.setAutor(JOptionPane.showInputDialog(null,"Entre com o autor: "));
+       livro.setTitulo(JOptionPane.showInputDialog(null,"Entre com o titulo do livro: "));
+       livro.setISBN(JOptionPane.showInputDialog(null,"Entre com o ISBN: "));
+       livro.setQuantidade(Integer.parseInt(JOptionPane.showInputDialog(null,"Quantidade de exemplares:")));
+       return livro;
     }
 
 }

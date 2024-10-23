@@ -1,17 +1,16 @@
-import View.LivroView;
+import View.MenuPrincipalView;
 
 import javax.swing.*;
-
+import javax.swing.text.View;
 
 
 public class Main
 {
     public static void main(String[] args)
     {
-        LivroView livroView = new LivroView();
+        MenuPrincipalView menup = new MenuPrincipalView();
 
-        livroView.menu();
-
+        menup.Menu();
 
     }
 }

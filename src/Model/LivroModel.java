@@ -7,16 +7,6 @@ public class LivroModel
         private String ISBN;
         private int quantidade;
 
-
-    public LivroModel(String titulo, String autor, String ISBN, int quantidade) {
-        this.titulo = titulo;
-        this.autor = autor;
-        this.ISBN = ISBN;
-        this.quantidade = quantidade;
-    }
-
-
-
     public String getTitulo() {
         return titulo;
     }
