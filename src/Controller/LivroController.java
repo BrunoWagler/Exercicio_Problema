@@ -2,8 +2,6 @@ package Controller;
 
 import Model.LivroModel;
 import Repository.LivroRepository;
-import View.LivroView;
-import javax.swing.*;
 
 
 public class LivroController
@@ -14,8 +12,6 @@ public class LivroController
     {
         String returnrepository = livroRepository.salvar(livro);
         return returnrepository;
-
-
 
 
     }

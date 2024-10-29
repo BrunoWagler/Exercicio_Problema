@@ -6,13 +6,6 @@ public class UsuarioModel
     private String email;
     private int numero;
 
-    public UsuarioModel(String nome, String email, int numero)
-    {
-        this.nome = nome;
-        this.email = email;
-        this.numero = numero;
-    }
-
     public String getNome() {
         return nome;
     }

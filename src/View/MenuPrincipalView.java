@@ -1,9 +1,11 @@
 package View;
 
-import javax.swing.*;
 import Controller.LivroController;
 import Model.LivroModel;
-import View.LivroView;
+import Controller.UsuarioController;
+import Model.UsuarioModel;
+
+import javax.swing.*;
 
 public class MenuPrincipalView
 {
@@ -11,10 +13,16 @@ public class MenuPrincipalView
     LivroView livroView = new LivroView();
     LivroController livroController = new LivroController();
 
+    UsuarioModel usuario = new UsuarioModel();
+    UsuarioView usuarioview = new UsuarioView();
+    UsuarioController usuariocontroller = new UsuarioController();
+
+
+
     public void Menu()
     {
-        String menu = "1 - Criar Livro: " +
-                "2 - Criar Usuario: " + "3 - Emprestimo de livro: ";
+        String menu = "1 - Criar Livro:\n" +
+                "2 - Criar Usuario:\n" + "3 - Emprestimo de livro:\n";
 
 
         int comando = Integer.parseInt(JOptionPane.showInputDialog(null,menu));
@@ -25,10 +33,15 @@ public class MenuPrincipalView
                 livro = livroView.menuCriarLivro(livro);
                 String retornoController = livroController.leituralivro(livro);
                 JOptionPane.showMessageDialog(null,retornoController);
+
                 break;
 
+            case 2:
+                usuario = usuarioview.menuusuario(usuario);
+                String retorno = usuariocontroller.leituraUsuario(usuario);
+                JOptionPane.showMessageDialog(null,retorno);
 
-
+                break;
         }
 
 

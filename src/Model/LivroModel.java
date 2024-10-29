@@ -1,11 +1,32 @@
 package Model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="Livro")
 public class LivroModel
 {
+        @Id
+        @GeneratedValue
+        private long id;
+
         private String titulo;
         private String autor;
         private String ISBN;
         private int quantidade;
+
+    public long getId()
+    {
+        return id;
+    }
+
+    public void setId(long id)
+    {
+        this.id = id;
+    }
 
     public String getTitulo() {
         return titulo;
